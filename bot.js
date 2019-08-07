@@ -11,7 +11,8 @@ client.on('ready', () => {
       console.log(`ON ${client.guilds.size} Servers '     Script By : EX Clan ' `);
     console.log(`----------------`);
   console.log(`Logged in as ${client.user.tag}!`);
-client.user.setGame(`By : ! 『ᎷᎮᏕ』𝐀𝐁𝐃𝐎 .`,"http://twitch.tv/Death Shop")
+client.user.setGame(`By : ! Abdo
+#9888`,"http://twitch.tv/Death Shop")
 client.user.setStatus("Oniline")
 });
 
@@ -23,8 +24,8 @@ client.on("message", async message => {
         if(!message.channel.guild) return;
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "bc") {
-                if(!message.member.hasPermission("MANAGE ROLES")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `MANAGE ROLES`**");
+                if(!message.member.hasPermission("ADMINISTRATOR")) {
+                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
                 }
                     if(!args) {
                         return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
@@ -155,7 +156,7 @@ client.on("message", async message => {
             معلومات عن السيرفر : ${prefix}server
             برودكاست للأونلاين فقط : ${prefix}bco
             يعرض لك عدد المتبندين من سيرفرك : ${prefix}banned
-            رابط سيرفر الدعم الفني : https://discord.gg/k6MvfrC
+            رابط سيرفر الدعم الفني : https://discord.gg/qtZuxen
             **`);
             message.channel.sendEmbed(help); // رابط السيرفر يعود الى سيرفر CODES .
     }
