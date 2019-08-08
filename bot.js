@@ -24,8 +24,8 @@ client.on("message", async message => {
         if(!message.channel.guild) return;
             var args = message.content.split(" ").slice(1).join(" ");
             if(command == "bc") {
-                if(!message.member.hasPermission("ADMINISTRATOR")) {
-                    return message.channel.send("**للأسف لا تمتلك صلاحية `ADMINISTRATOR`**");
+                if(!message.member.hasPermission("MANAGE SERVER")) {
+                    return message.channel.send("**للأسف لا تمتلك صلاحية `MANAGE SERVER`**");
                 }
                     if(!args) {
                         return message.reply("**يجب عليك كتابة كلمة او جملة لإرسال البرودكاست**");
